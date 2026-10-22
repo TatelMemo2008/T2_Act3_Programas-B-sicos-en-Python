@@ -17,8 +17,13 @@ if __name__ == "__main__":
     largo = float(input("Largo del rectángulo en cm: "))
     ancho = float(input("Ancho del rectángulo en cm: "))
  
-    # Proceso
-    area = calcular_area(largo, ancho)
- 
-    # Salida
-    print(f"El área del rectángulo es: {area:.2f} cm²")
+    #Si el largo o el ancho fueran 0 la multiplicación daría 0, por eso reviso antes
+    if largo > 0 and ancho > 0:
+        # Proceso
+        area = calcular_area(largo, ancho)
+
+        # Salida
+        print(f"El área del rectángulo es: {area:.2f} cm²")
+    else:
+        print("El largo y el ancho deben ser mayores que cero")
+     
